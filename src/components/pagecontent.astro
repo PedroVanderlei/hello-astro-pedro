@@ -21,19 +21,23 @@ const title = frontmatter.title
   <section class="mb-9 space-y-1">
     <p
       itemprop="articleSection"
-      class="font-display text-sm font-medium text-purple-600 dark:text-purple-300"
+      class="font-display text-sm font-medium text-amber-900/90 dark:text-amber-200"
     >
       {frontmatter.section}
     </p>
+
     <h1 class="font-display text-3xl tracking-tight text-slate-900 dark:text-white">
       {title}
     </h1>
-    <nav class="block sm:hidden">
+
+    <nav class="block sm:hidden" aria-label="Sumário">
       <TableOfContents headings={headings} />
     </nav>
+
     <slot itemprop="articleBody" />
   </section>
-  <nav class="block sm:hidden">
+
+  <nav class="block sm:hidden" aria-label="Mais opções">
     <MoreMenu editHref={githubEditUrl} />
   </nav>
 </article>

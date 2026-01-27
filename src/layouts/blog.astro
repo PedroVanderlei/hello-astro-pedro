@@ -15,19 +15,21 @@ const { post, prev, next } = Astro.props
 ---
 
 <Base frontmatter={post.data}>
-  <main class="dark:bg-black">
+  <main class="bg-white dark:bg-gray-950">
     <article class="post">
       <header>
         <BlogHero {post} />
       </header>
+
       <section
-        class="prose prose-purple dark:prose-invert lg:prose-xl mx-auto my-8 max-w-(--breakpoint-lg) px-4 lg:px-0"
+        class="prose prose-slate dark:prose-invert lg:prose-xl prose-a:font-semibold prose-a:no-underline prose-a:text-amber-900 hover:prose-a:text-amber-800 prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.amber.200))] hover:prose-a:[--tw-prose-underline-size:6px] dark:prose-a:text-amber-200 dark:hover:prose-a:text-amber-100 dark:prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.amber.900))] dark:hover:prose-a:[--tw-prose-underline-size:6px] prose-pre:rounded-xl prose-pre:bg-slate-900 prose-pre:shadow-lg dark:prose-pre:bg-slate-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10 prose-blockquote:border-amber-200/80 dark:prose-blockquote:border-amber-900/40 mx-auto my-8 max-w-(--breakpoint-lg) px-4 lg:px-0 dark:[--tw-prose-background:var(--color-gray-950)]"
       >
         {post.data.images && <Images images={post.data.images} />}
         <slot itemprop="articleBody" />
       </section>
     </article>
   </main>
+
   <NextPrev
     slot="before-footer"
     base={import.meta.env.BASE_URL + 'blog/'}
