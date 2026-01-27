@@ -33,40 +33,73 @@ const callouts = [
 ]
 ---
 
-<div class="bg-purple-100 dark:bg-purple-900">
+<div class="bg-amber-50/60 dark:bg-gray-900">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-      <h2 class="text-4xl font-extrabold text-purple-800 dark:text-purple-100">
-        Encontrar outros caminhos
-      </h2>
+      <div class="flex items-baseline justify-between gap-6">
+        <h2 class="text-4xl font-extrabold text-amber-900/90 dark:text-amber-200">
+          Encontrar outros caminhos
+        </h2>
 
-      <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
+        <div class="hidden items-center gap-2 text-sm text-gray-700 sm:flex dark:text-gray-300">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-amber-700/70 dark:bg-amber-200/80"
+          ></span>
+          <span>Alguns links ainda estão em construção</span>
+        </div>
+      </div>
+
+      <div class="mt-8 space-y-10 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
         {
           callouts.map((callout) => (
             <div class="group relative">
-              <div class="sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:h-64 dark:bg-purple-600">
-                <img
-                  src={callout.imageSrc}
-                  alt={callout.imageAlt}
-                  class="h-full w-full object-contain object-center"
-                  loading="lazy"
-                />
+              <div class="relative overflow-hidden rounded-2xl border border-amber-200/70 bg-white/80 shadow-sm transition hover:bg-white dark:border-amber-900/30 dark:bg-gray-950/40 dark:hover:bg-gray-950/55">
+                <div class="relative h-72 w-full p-6 sm:h-64">
+                  {/* Badge "Em breve" */}
+                  {callout.comingSoon && (
+                    <div class="absolute top-4 right-4 z-10 rounded-full border border-amber-200/80 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900 shadow-sm dark:border-amber-900/40 dark:bg-amber-200/10 dark:text-amber-100">
+                      Em breve
+                    </div>
+                  )}
+
+                  <img
+                    src={callout.imageSrc}
+                    alt={callout.imageAlt}
+                    class="h-full w-full object-contain object-center transition-transform duration-300 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="px-6 pb-6">
+                  <h3 class="text-2xl font-semibold text-amber-900 dark:text-amber-200">
+                    <a
+                      href={callout.href}
+                      aria-disabled={callout.comingSoon ? 'true' : undefined}
+                      tabindex={callout.comingSoon ? -1 : undefined}
+                      class={
+                        (callout.comingSoon
+                          ? 'cursor-not-allowed opacity-70'
+                          : 'hover:text-amber-800 dark:hover:text-amber-100') +
+                        ' inline-flex items-center gap-2 transition-colors'
+                      }
+                      title={callout.comingSoon ? 'Em breve' : undefined}
+                    >
+                      {callout.name}
+                      {!callout.comingSoon && (
+                        <span class="text-amber-700/70 dark:text-amber-200/70" aria-hidden="true">
+                          →
+                        </span>
+                      )}
+                      <span class="absolute inset-0" />
+                    </a>
+                  </h3>
+
+                  <p class="mt-2 text-base text-gray-700 dark:text-gray-300">
+                    {callout.description}
+                  </p>
+
+                  <div class="mt-4 h-px w-24 bg-gradient-to-r from-amber-700/40 to-transparent dark:from-amber-200/25" />
+                </div>
               </div>
-
-              <h3 class="mt-6 text-2xl text-purple-500 dark:text-purple-300">
-                <a
-                  href={callout.href}
-                  aria-disabled={callout.comingSoon ? 'true' : undefined}
-                  tabindex={callout.comingSoon ? -1 : undefined}
-                  class={callout.comingSoon ? 'cursor-not-allowed' : undefined}
-                  title={callout.comingSoon ? 'Em breve' : undefined}
-                >
-                  <span class="absolute inset-0" />
-                  {callout.name}
-                </a>
-              </h3>
-
-              <p class="text-base text-gray-900 dark:text-gray-100">{callout.description}</p>
             </div>
           ))
         }
