@@ -1,7 +1,7 @@
 ---
 section: Documentos do projeto
 title: Atualizações e versões
-description: Como lidar com textos que mudam: revisão como método, não como instabilidade.
+description: "Como lidar com textos que mudam: "
 ---
 
 Aqui, textos podem mudar — e isso não é erro: é parte do método.

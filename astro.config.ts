@@ -19,8 +19,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://hellotham.github.io',
-  base: '/hello-astro/',
+  site: 'https://pedrovanderlei.github.io',
+  base: import.meta.env.PROD ? '/hello-astro-pedro/' : '/',
+
   image: {
     layout: 'constrained'
   },
