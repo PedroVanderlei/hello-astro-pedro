@@ -17,9 +17,9 @@ const { page } = Astro.props
 
 const frontmatter: CollectionEntry<'page'>['data'] = {
   title:
-    'Arquivo' +
-    (page.size < page.total ? ' (página ' + page.currentPage + ' de ' + page.lastPage + ')' : ''),
-  description: 'Entradas e textos organizados para consulta e retorno.',
+    'Blog' +
+    (page.size < page.total ? ' (page ' + page.currentPage + ' of ' + page.lastPage + ')' : ''),
+  description: 'View our articles.',
   coverSVG,
   socialImage
 }

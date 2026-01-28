@@ -21,7 +21,6 @@ export default defineConfig({
   },
   site: 'https://pedrovanderlei.github.io',
   base: import.meta.env.PROD ? '/hello-astro-pedro/' : '/',
-
   image: {
     layout: 'constrained'
   },

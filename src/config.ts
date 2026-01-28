@@ -7,26 +7,26 @@ export interface TagType {
 }
 
 export const SiteMetadata = {
-  title: 'Notas de Rodapé',
-  description: 'Um projeto',
+  title: 'Hello Astro',
+  description: 'An Astro starter for corporate/marketing/blog websites.',
   author: {
-    name: 'Pedro H P Vanderlei',
+    name: 'Chris Tham',
     twitter: '@chris1tham',
     url: 'https://christham.net',
-    email: 'pedrohpvanderlei@hotmail.com',
-    summary: 'O unico autor por enquanto.'
+    email: 'chris@christham.net',
+    summary: 'Outrageous actualiser.'
   },
   org: {
-    name: 'NOtas de Rodapé',
+    name: 'Hello Tham',
     twitter: '@hellothamcom',
     url: 'https://hellotham.com',
-    email: 'notasderodapeofc@gmail.com',
+    email: 'info@hellotham.com',
     summary:
-      'Notas de Rodapé é quase um repositório público que se preucupa um pouco se alguém vai ler'
+      'Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.'
   },
   location: 'Rivendell, Middle Earth',
   latlng: [-33.86785, 151.20732] as [number, number],
-  repository: 'https://github.com/PedroVanderlei/hello-astro-pedro/tree/home-experimento-1',
+  repository: 'https://github.com/hellotham/hello-astro',
   buildTime: new Date()
 }
 
@@ -38,17 +38,17 @@ export { default as DefaultImage } from './assets/undraw/undraw_my_feed.png'
 
 export const NavigationLinks = [
   { name: 'Home', href: '' },
-  { name: 'Sobre', href: 'about' },
-  { name: 'Contato', href: 'contact' },
-  { name: 'Arquivo', href: 'blog' },
+  { name: 'About', href: 'about' },
+  { name: 'Contact', href: 'contact' },
+  { name: 'Blog', href: 'blog' },
   { name: 'Docs', href: 'doc/introduction' }
 ]
 
 export const PAGE_SIZE = 8
 
-export const GITHUB_EDIT_URL = `https://github.com/PedroVanderlei/hello-astro-pedro/tree/home-experimento-1`
+export const GITHUB_EDIT_URL = `https://github.com/hellotham/hello-astro`
 
-export const COMMUNITY_INVITE_URL = `https://discord.gg/pWDZWyapQ3`
+export const COMMUNITY_INVITE_URL = `https://astro.build/chat`
 
 export type Sidebar = Record<string, { text: string; link: string }[]>
 
