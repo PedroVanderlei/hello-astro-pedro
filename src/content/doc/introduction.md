@@ -1,26 +1,44 @@
 ---
-section: Section Header
-title: Introduction
-description: Docs intro
+section: Documentos do projeto
+title: Introdução
+description: Como ler, navegar e entender a função desta área dentro do Notas de Rodapé.
 ---
 
-**Welcome to Astro!**
+# Introdução
 
-This is the `docs` starter template. It contains all of the features that you need to build a Markdown-powered documentation site, including:
+Esta área existe para **explicar o projeto por dentro**.
 
-- ✅ **Full Markdown support**
-- ✅ **Responsive mobile-friendly design**
-- ✅ **Sidebar navigation**
-- ✅ **Search (powered by Algolia)**
-- ✅ **Multi-language i18n**
-- ✅ **Automatic table of contents**
-- ✅ **Automatic list of contributors**
-- ✅ (and, best of all) **dark mode**
+Não é um “blog de novidades”, nem um manual de produtividade. É um conjunto de páginas que registram **o que este espaço pretende ser**, **o que ele evita**, e **como ele deve ser lido** quando você volta depois de dias — ou meses.
 
-## Getting Started
+Se você chegou aqui por curiosidade: comece sem pressa. Se você chegou aqui porque quer se orientar: use como mapa.
 
-To get started with this theme, check out the `README.md` in your new project directory. It provides documentation on how to use and customize this template for your own project. Keep the README around so that you can always refer back to it as you build.
+## O que você encontra aqui
 
-Found a missing feature that you can't live without? Please suggest it on Discord [(#ideas-and-suggestions channel)](https://astro.build/chat) and even consider adding it yourself on GitHub! Astro is an open source project and contributions from developers like you are how we grow!
+- **Orientação de leitura**: como navegar, retomar e seguir um fio.
+- **Critérios do projeto**: por que algumas coisas aparecem e outras não.
+- **Revisão e maturação**: textos mudam, versões são substituídas, e isso é parte do método.
+- **Limites**: o que este espaço não faz (e por que não faz).
 
-Good luck out there, Astronaut. 🧑‍🚀
+## Como usar
+
+1. **Use o menu lateral** para ver a estrutura por seções.
+2. **Use a busca** quando você tiver um termo ou assunto em mente.
+3. **Use “Próximo/Anterior”** no fim da página para ler em sequência.
+4. Se algo parecer “incompleto”, trate como parte do processo: alguns textos existem como base estável; outros ainda estão se formando.
+
+## Um princípio simples
+
+Este projeto não opera pela urgência.
+
+Aqui, uma ideia pode demorar. Pode ser reescrita. Pode ser enxugada. Pode desaparecer para voltar melhor. O objetivo é manter **clareza suficiente** para leitura real — não volume.
+
+## Por onde começar
+
+Se você quer um caminho curto:
+
+- Leia a **Apresentação** (o texto-base do projeto).
+- Depois, escolha um tema no **Arquivo** e siga por proximidade.
+
+> Observação: quando uma página for atualizada, ela será atualizada como página — não como “post de anúncio”.
+
+---
